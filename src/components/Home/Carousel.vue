@@ -3,62 +3,70 @@
     <div class="row category-box-row1">
       <div class="Cooldog_content">
         <ul>
-          <li class="p1">
+          <li v-for="item in courses" class="p1" v-bind:key="item.title">
             <div class="col-md-4">
               <a href="videos-grid.htm" class="category-box-item1">
                 <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目七</h2>
+                <h2>{{ item.title }}</h2>
               </a>
             </div>
           </li>
-          <li class="p2">
-            <div class="col-md-4">
-              <a href="videos-grid.htm" class="category-box-item1">
-                <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目六</h2>
-              </a>
-            </div>
-          </li>
-          <li class="p3">
-            <div class="col-md-4">
-              <a href="videos-grid.htm" class="category-box-item1">
-                <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目五</h2>
-              </a>
-            </div>
-          </li>
-          <li class="p4">
-            <div class="col-md-4">
-              <a href="videos-grid.htm" class="category-box-item1">
-                <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目四</h2>
-              </a>
-            </div>
-          </li>
-          <li class="p5">
-            <div class="col-md-4">
-              <a href="videos-grid.htm" class="category-box-item1">
-                <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目三</h2>
-              </a>
-            </div>
-          </li>
-          <li class="p5">
-            <div class="col-md-4">
-              <a href="videos-grid.htm" class="category-box-item1">
-                <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目二</h2>
-              </a>
-            </div>
-          </li>
-          <li class="p5">
-            <div class="col-md-4">
-              <a href="videos-grid.htm" class="category-box-item1">
-                <i class="fa fa-cogs fa-5x"></i>
-                <h2>科目一</h2>
-              </a>
-            </div>
-          </li>
+<!--          <li class="p1">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目七</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="p2">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目六</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="p3">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目五</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="p4">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目四</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="p5">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目三</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="p5">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目二</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="p5">-->
+<!--            <div class="col-md-4">-->
+<!--              <a href="videos-grid.htm" class="category-box-item1">-->
+<!--                <i class="fa fa-cogs fa-5x"></i>-->
+<!--                <h2>科目一</h2>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
         </ul>
       </div>
     </div>
@@ -74,16 +82,25 @@
 <script>
     import '../../assets/script/jquery-3.3.1.min'
     import '../../assets/script/Cooldog'
-    // import '../assets/script/animate'
-    // import '../assets/script/script'
 
     export default {
-        name: "Carousel"
+        name: "Carousel",
+        data () {
+            return {
+                courses: [
+                    {
+                        title: '课程1'
+                    },
+                    {
+                        title: '课程2'
+                    }
+                ]
+            }
+        }
     }
 </script>
 
 <style scoped>
-  /*@import '../assets/css/style.css';*/
   @import '../../assets/css/Cooldog.css';
   @import '../../assets/css/iconfont.css';
 </style>
