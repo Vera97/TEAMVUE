@@ -1,14 +1,11 @@
 <template>
     <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png">
-        <!--HelloWorld msg="Welcome to Your Vue.js App"/-->
         <!--路由渲染出口-->
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-    //import HelloWorld from './components/TestPages.vue'
     export default {
         name: 'app',
         //由于用vue-router进行路由，所以这里可以不用导入，并注册组件了，提供vue-router渲染出口即可
@@ -81,11 +78,5 @@
 </script>
 
 <style>
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+    @import 'assets/plugin/bootstrap/css/bootstrap.css';
 </style>
