@@ -33,3 +33,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### $大家commit以后建议都在这里注明一下，以备检查和跟踪
 ##### 2019.7.2 # 添加仓库
 ##### 2019.7.3 # 配置打包后静态文件输出目录，方便以后后台使用
+##### 2019.7.7 # 页面去除了原本使用的JQuery和Bootstrap框架，替换为Element UI框架（https://element.eleme.cn/2.0/#/zh-CN/component/installation）
