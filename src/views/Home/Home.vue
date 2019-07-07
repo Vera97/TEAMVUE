@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <Nav></Nav>
-    <Search></Search>
-    <Carousel></Carousel>
-    <ClassList></ClassList>
-    <Footer></Footer>
-  </div>
+  <el-container>
+    <el-header><Nav></Nav></el-header>
+    <el-main>
+      <Search></Search>
+      <Carousel></Carousel>
+      <ClassList></ClassList>
+    </el-main>
+    <el-footer><Footer></Footer></el-footer>
+  </el-container>
 </template>
 
 <script>
@@ -24,8 +26,14 @@
         //     })
         // }
     }
+
 </script>
 
 <style scoped>
-
+  .el-header{
+    padding:0;
+  }
+  .el-footer{
+    padding:0;
+  }
 </style>

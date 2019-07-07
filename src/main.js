@@ -1,3 +1,5 @@
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import Vue from 'vue'
 import App from './App.vue'
 //Vuex
@@ -5,15 +7,12 @@ import store from './store';
 //Vue-router
 import VueRouter from 'vue-router'
 import routes from './routes'
-// import BootstrapVue from 'bootstrap-vue'
-// import '../node_modules/bootstrap/dist/css/bootstrap.css'
-// import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css'
 
-
-// Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 //Vue-router设置
 Vue.use(VueRouter);
+Vue.use(ElementUI);
+
 const router = new VueRouter({
     mode: 'history',
     routes: routes

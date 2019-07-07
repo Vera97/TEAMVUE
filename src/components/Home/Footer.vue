@@ -1,13 +1,9 @@
 <template>
-  <div class="container-fluid">
-    <footer class="main bg-dark-img container-fluid">
-      <section class="copyright">
-        <div class="container-fluid"> &copy; Copyright 2019 <b>hedouclass.com</b> &nbsp; | &nbsp; All rights reserved.<a
-                href="#" target="_blank" title="禾斗创课">禾斗创课</a>
-        </div>
-      </section>
-    </footer>
-  </div>
+    <section class="copyright">
+      <div class="container-fluid"> &copy; Copyright 2019 <b>hedouclass.com</b> &nbsp; | &nbsp; All rights reserved.
+        <a href="#" target="_blank" title="禾斗创课" style="color: #ffffff;">禾斗创课</a>
+      </div>
+    </section>
 </template>
 
 <script>
@@ -17,5 +13,9 @@
 </script>
 
 <style scoped>
-
+  .copyright{
+    color:#ffffff;
+    background-color:#409EFF;
+    padding:20px;
+  }
 </style>
