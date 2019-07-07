@@ -8,8 +8,11 @@ const listTable = loadcomponents => require.ensure([], () => loadcomponents(requ
 const labinfo = loadcomponents => require.ensure([], () => loadcomponents(require('@/components/experiment/labinfo.vue')), 'experiment');
 */
 
+import notFound from "./views/NotFound/NotFound";
+
 const CourseTable = () => import('./components/selected_course_table.vue');
-const TestPage = () => import('./components/TestPages.vue');
+// const TestPage = () => import('./components/TestPages.vue');
+const home = () => import('./views/Home/Home.vue');
 
 ///正确的姿势建议应该是在组件的created钩子中，或者在组件的beforeEach导航钩子中从服务器请求资
 // 源然后提交vuex，组件再同一从vuex中获取数据
@@ -17,7 +20,7 @@ const TestPage = () => import('./components/TestPages.vue');
 let routes = [
     {
         path: '/',
-        component: TestPage,
+        component: home,
         redirect: '/home',
         children: [
             {
@@ -27,6 +30,10 @@ let routes = [
             },
         ]
     },
+    {
+        path: '*',
+        component: notFound
+    }
 ];
 
 export default routes;
